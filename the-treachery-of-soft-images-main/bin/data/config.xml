@@ -1,0 +1,8 @@
+<CONFIG>
+	<timeInterval>15000</timeInterval>
+	<percentageX>21.39</percentageX>
+	<showDesiredMargin>1</showDesiredMargin>
+	<port>9091</port>
+	<clientIp>192.168.1.110</clientIp>
+	<cyclesPerImage>5</cyclesPerImage>
+</CONFIG>

@@ -1,0 +1,34 @@
+# exclude everything
+searchImageScrape/images/pipe/*
+searchImageScrape/images/broom/*
+searchImageScrape/images/egg/*
+searchImageScrape/images/hammer/*
+searchImageScrape/images/jar/*
+searchImageScrape/images/sponge/*
+searchImageScrape/images/telephone/*
+
+the-treachery-of-soft-images-main/bin/data/broom/*
+the-treachery-of-soft-images-main/bin/data/egg/*
+the-treachery-of-soft-images-main/bin/data/hammer/*
+the-treachery-of-soft-images-main/bin/data/jar/*
+the-treachery-of-soft-images-main/bin/data/pipe/*
+the-treachery-of-soft-images-main/bin/data/sponge/*
+the-treachery-of-soft-images-main/bin/data/telephone/*
+
+# exception to the rule
+!searchImageScrape/images/pipe/.gitkeep
+!searchImageScrape/images/broom/.gitkeep
+!searchImageScrape/images/egg/.gitkeep
+!searchImageScrape/images/hammer/.gitkeep
+!searchImageScrape/images/jar/.gitkeep
+!searchImageScrape/images/sponge/.gitkeep
+!searchImageScrape/images/telephone/.gitkeep 
+
+!the-treachery-of-soft-images-main/bin/data/broom/.gitkeep
+!the-treachery-of-soft-images-main/bin/data/egg/.gitkeep
+!the-treachery-of-soft-images-main/bin/data/hammer/.gitkeep
+!the-treachery-of-soft-images-main/bin/data/jar/.gitkeep
+!the-treachery-of-soft-images-main/bin/data/pipe/.gitkeep
+!the-treachery-of-soft-images-main/bin/data/sponge/.gitkeep
+!the-treachery-of-soft-images-main/bin/data/telephone/.gitkeep
+

@@ -1,6 +1,7 @@
 <CONFIG>
-	<timeInterval>15000</timeInterval>
-	<percentageX>21.39</percentageX>
+	<timeInterval>5000</timeInterval>
+	<!--to fit the frame use 21.39% -->
+	<percentageX>61.39</percentageX>
 	<showDesiredMargin>1</showDesiredMargin>
 	<port>9091</port>
 	<clientIp>192.168.1.110</clientIp>

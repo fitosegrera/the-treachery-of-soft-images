@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofBackground(0);
+	ofBackground(255);
 
 	totalImageTypes = 7;
 
@@ -90,6 +90,7 @@ void ofApp::setup(){
 	*/
 
 	desiredScreenWidth = ofGetScreenWidth() - ((percentageX/100) * ofGetScreenWidth());
+	
 	rescaleImage();
 
 	//timer setup
@@ -131,15 +132,24 @@ void ofApp::rescaleImage(){
 
 	if(h >= w){
 		cout<< "HEIGHT-BIGGER"<< endl;
-		w = desiredScreenWidth;
-		h = image.getHeight() * desiredScreenWidth / image.getWidth();
+		// w = desiredScreenWidth;
+		// h = image.getHeight() * desiredScreenWidth / image.getWidth();
+		// h = ofGetScreenHeight() - ofGetScreenHeight() / 3;
+		// w = image.getWidth() * ofGetScreenHeight() / h;
+		h = ofGetScreenHeight() - ofGetScreenHeight() / 3;
+		w = h * image.getWidth() / image.getHeight();		
 	}else{
 		cout<< "WIDTH-BIGGER"<< endl;
-		w = image.getWidth() * ofGetScreenHeight() / image.getHeight();
-		while(w < desiredScreenWidth){
-			w++;
-		}
-		h = ofGetScreenHeight();
+		// float ratio = image.getWidth() / image.getHeight();
+		//cout<< "RATIO: " + ofToString(ratio)<< endl;
+		// w = image.getWidth() * ofGetScreenHeight() / image.getHeight();
+		// while(w < desiredScreenWidth){
+		// 	w++;
+		// 	// h += 1/ratio;
+		// }
+		// h = ofGetScreenHeight();
+		w = desiredScreenWidth;
+		h = w * image.getHeight() / image.getWidth();
 	}
 
 	image.resize(w,h);
@@ -188,9 +198,10 @@ void ofApp::draw(){
 	if(isTextConnected){
 		//Draw the image
 		ofSetColor(255);
-		image.draw(ofGetScreenWidth()/2 - image.getWidth()/2,
-			ofGetScreenHeight()/2 - image.getHeight()/2);
-
+		ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
+			image.draw(ofGetScreenWidth()/2 - image.getWidth()/2,
+				ofGetScreenHeight()/2 - image.getHeight()/2);
+		ofDisableBlendMode();
 		//Show Desired margin at sides in green
 		if(showDesiredMargin){
 			ofSetColor(0,255,0,100);
